@@ -14,17 +14,17 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
 
 // Check if image file is a actual image or fake image
-if(isset($_POST["submit"])) {
 
-	// temp name is actually the temporary path of the file
-    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-    if($check !== false) {
-        echo "File is an image - " . $check["mime"] . ".";
-        $uploadOk = 1;
-    } else {
-        echo "File is not an image.";
-        $uploadOk = 0;
-    }
+// temp name is actually the temporary path of the file
+//
+// for the $_FILES variable, see the <input name=".."> in the html  file
+$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+if($check !== false) {
+	echo "File is an image - " . $check["mime"] . ".";
+	$uploadOk = 1;
+} else {
+	echo "File is not an image.";
+	$uploadOk = 0;
 }
 
 
