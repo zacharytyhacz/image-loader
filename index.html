@@ -7,7 +7,9 @@
 		<!-- the submit button will submit the <form> as a whole -->
 		<form action="test.php" method="POST">
 			<input style = "box-decoration-break: clone" type = "file" accept="image/png, image/jpeg">
-			<button type="submit">Submit</button>
+
+			<!-- type="button" prevents it's parent <form> from being submitted -->
+			<button type="button">Submit</button>
 		</form>
         <script src="loader.js" charset="utf-8"></script>
     </body>
