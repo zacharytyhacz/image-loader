@@ -1,5 +1,6 @@
 // creates img-id
-function imgId() {
+function createId() {
+	console.log("here");
     let str = '';
     let i;
     let chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -7,12 +8,18 @@ function imgId() {
     for (i = 0; i < 20; i++) {
         str.concat(chars.charAt(Math.floor(Math.random() * chars.length)));
     }
-    return str;
+
+	// to get the uploaded file, you can access the `files` array and first file
+	let imgFile = document.getElementById("input").files[0];
+
+	// look up javascript's File() object and you can change the name and see file size and stuff
+
+
+	// get the <form> id and submit it to send the form data to the PHP file
 }
 
 // triggers id method
-document.querySelector("button").addEventListener("click", imgId);
+document.querySelector("button").addEventListener("click", createId);
 
-// reads img file input
-let img-file = document.getElementById("input");
-let imgId = img-file;
+
+// moved the code that was here into the createID function
