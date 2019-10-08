@@ -1,6 +1,7 @@
 // creates img-id
+//  this is good here
 function createId() {
-	console.log("here");
+	console.log("test");
     let str = '';
     let i;
     let chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -14,12 +15,9 @@ function createId() {
 
 	// look up javascript's File() object and you can change the name and see file size and stuff
 
-
-	// get the <form> id and submit it to send the form data to the PHP file
+	// get the <form> id and form.submit() it to send the form data to the PHP file
 }
 
+// this is good here too
 // triggers id method
 document.querySelector("button").addEventListener("click", createId);
-
-
-// moved the code that was here into the createID function
